@@ -1,14 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { ChakraProvider } from "@chakra-ui/react";
+import Home from "./Home";
 
 function App() {
   return (
     <ChakraProvider>
-      <div className="App">
-        <p>他の人より早く出てきたカードの名前を呼ぼう！</p>
-        <p>初めてみるカードには名前をつけよう！</p>
-      </div>
+      <Home />
     </ChakraProvider>
   );
 }
