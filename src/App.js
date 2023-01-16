@@ -4,6 +4,13 @@ import { useMemo } from "react";
 import { useState } from "react";
 
 const IMAGES = 12;
+let images = new Array(IMAGES);
+for(let i=0; i<IMAGES; i++){
+  images[i] = new Image();
+  images[i].src = `./img/image${i+1}`;
+  images[i].crossOrigin = "Anonymous";
+}
+console.log({images});
 const Card = styled.div`
   width: 360px;
   height: 360px;
@@ -73,7 +80,7 @@ const App = () => {
           <CardBack isOpen={isOpen}>
             <Image
               w="60%"
-              src={`${process.env.PUBLIC_URL}/img/kids_chuunibyou_girl.png`}
+              src={`/img/kids_chuunibyou_girl.png`}
               alt="読み込みエラーです、、、"
             />
           </CardBack>
